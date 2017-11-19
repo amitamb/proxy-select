@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Proxy-select examples</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../proxy-select.css" >
+  <style>
+    html, body {
+      margin: 0; padding: 0;
+      width:100%;
+      height: 100%;
+    }
+    body {
+      padding: 20px 30px;
+      width:auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>Mouse events info:</h3>
+  <div id="mouse_info" style="width: 300px;">
+  </div>
+  <p>
+    Observe that mouse events keep flowing on proxied select even when select is opened.
+  </p>
+
+  <p>
+    <b>Proxied select</b><br />
+    <select>
+      <option value="volvo" selected>Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+  </p>
+
+  <p>
+    <b>Normal select</b><br />
+    <select no-proxy-select>
+      <option value="volvo" selected>Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+  </p>
+
+</body>
+<script src="../proxy-select.js"></script>
+<script>
+  document.documentElement.addEventListener("mousemove", function(e){
+    var mouse_info = document.getElementById("mouse_info");
+    mouse_info.innerText = e.clientX + ", " + e.clientY;
+  }, false)
+</script>
+</html>
