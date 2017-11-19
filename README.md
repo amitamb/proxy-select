@@ -3,11 +3,11 @@ Replaces native select with pure HTML based select to allow event handling when 
 
 # Use case
 
-Primary usage is to control the select even when select is exampned/opened. Normally, when select is opened OS takes control and you don't know where mouse is till an option is not selected.
+Primary usage is to control the select even when select is expanded/opened. Normally, when select is opened OS takes control and you don't know where mouse is till an option is not selected.
 
-Even when using headless tools like puppeteer to take screenshots, it allows you to capture correct screenshot when select is opened.
+Also using headless tools like puppeteer to take screenshots, it allows you to capture correct screenshot when select is opened.
 
-Alternatively, you can use libraries like chosen which will allow same thing but they come with their own API and styling while proxy-select can be included in any project and won't affect existing code.
+Alternatively, you can use libraries like chosen which will allow the same thing but they come with their own API and styling while proxy-select can be included in any project and won't affect existing code. It also uses native JS.
 
 # Usage
 
